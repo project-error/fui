@@ -2,6 +2,7 @@
   "name": "@project-error/fui",
   "version": "0.0.1",
   "main": "lib/index.js",
+  "private": false,
   "module": "dist/index.js",
   "types": "types/index.d.ts",
   "license": "MIT",
