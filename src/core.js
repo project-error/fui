@@ -14,8 +14,8 @@ function createComponent(Comp, props) {
   return S.sample(() => Comp(props));
 }
 
-function useData(initalValue = null) {
-  const data = S.data(initalValue);
+function useData(initialVaue = null) {
+  const data = S.data(initialVaue);
   return data;
 }
 

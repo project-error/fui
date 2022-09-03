@@ -16,8 +16,8 @@ export const nuiEvent = (action, handler) => {
   })
 }
 
-export const useClientData = (action, initalValue = null) => {
-  const state = useData(initalValue);
+export const useClientData = (action, initialVaue = null) => {
+  const state = useData(initialVaue);
 
   nuiEvent(action, (data) => {
     state(data)
