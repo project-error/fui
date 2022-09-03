@@ -5,7 +5,7 @@ const currentContext = null;
 function memo(fn, equal) {
   if (typeof fn !== "function") return fn;
   if (!equal) return S(fn);
-  const s = S.value(sample(fn));
+  const s = S.value(S.sample(fn));
   S(() => s(fn()));
   return s;
 }
@@ -14,7 +14,7 @@ function createComponent(Comp, props) {
   return S.sample(() => Comp(props));
 }
 
-function useData(initialVaue = null) {
+function useData<T = any>(initialVaue: T) {
   const data = S.data(initialVaue);
   return data;
 }

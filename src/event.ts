@@ -1,6 +1,6 @@
 import { cleanup, root, useData } from "./core";
 
-export const nuiEvent = (action, handler) => {
+export const nuiEvent = <T = unknown>(action: string, handler: (data: T) => void) => {
   const listener = (event) => {
     const { action: eventAction, data } = event.data;
 
@@ -16,10 +16,10 @@ export const nuiEvent = (action, handler) => {
   })
 }
 
-export const useClientData = (action, initialVaue = null) => {
+export const useClientData = <T = any>(action: string, initialVaue: any): T => {
   const state = useData(initialVaue);
 
-  nuiEvent(action, (data) => {
+  nuiEvent(action, (data: any) => {
     state(data)
   })
 

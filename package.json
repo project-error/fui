@@ -1,10 +1,12 @@
 {
-  "name": "fui",
-  "version": "1.0.0",
-  "main": "index.js",
+  "name": "@project-error/fui",
+  "version": "0.0.1",
+  "main": "lib/index.js",
+  "module": "dist/index.js",
+  "types": "types/index.d.ts",
   "license": "MIT",
   "scripts": {
-    "build": "rollup -c"
+    "build": "rollup -c && ncp ./src/jsx.d.ts ./types/jsx.d.ts && tsc"
   },
   "devDependencies": {
     "@babel/core": "7.11.6",
@@ -14,7 +16,9 @@
     "@rollup/plugin-node-resolve": "11.2.0",
     "babel-plugin-transform-rename-import": "^2.3.0",
     "dom-expressions": "0.25.15",
+    "ncp": "^2.0.0",
     "rollup": "^2.79.0",
-    "s-js": "^0.4.9"
+    "s-js": "^0.4.9",
+    "typescript": "^4.8.2"
   }
 }
