@@ -1,15 +1,13 @@
 {
-  "name": "@project-error/fui",
-  "version": "0.0.2",
+  "name": "fui-js",
+  "version": "0.1.0",
   "main": "lib/index.js",
   "private": false,
   "module": "dist/index.js",
   "types": "types/index.d.ts",
   "license": "MIT",
   "files": [
-    "dist",
-    "lib",
-    "types"
+    "dist"
   ],
   "scripts": {
     "build": "rollup -c && ncp ./src/jsx.d.ts ./types/jsx.d.ts && tsc"
