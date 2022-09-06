@@ -1,0 +1,19 @@
+{
+  "name": "example",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "build": "rollup -c",
+    "start": "rollup -c -w"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.18.13",
+    "@rollup/plugin-babel": "^5.3.1",
+    "babel-plugin-jsx-dom-expressions": "^0.34.5",
+    "rollup": "^2.79.0"
+  },
+  "dependencies": {
+    "@project-error/fui": "^0.0.1"
+  }
+}
